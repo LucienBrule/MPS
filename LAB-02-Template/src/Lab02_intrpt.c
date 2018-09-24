@@ -10,6 +10,10 @@
 // -- Imports ---------------
 //
 #include "init.h"
+#include "task1.c"
+#include "task2.c"
+#include "task3.c"
+#include "task4.c"
 
 //
 //
@@ -18,6 +22,7 @@
 void blinkScreen();
 void Init_GPIO();
 void Init_Timer();
+
 
 //
 //
@@ -39,6 +44,7 @@ int main() {
 	Init_GPIO();
 
 	while (1) {
+		t1();
 		// Main loop code goes here
 		printf("\033c\033[36m\033[2J");
 		printf("Blink!\r\n");
@@ -107,7 +113,6 @@ void Init_GPIO() {
 	RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
 	__HAL_RCC_SYSCFG_CLK_ENABLE();
 
-
 	// Delay after an RCC peripheral clock enabling
 	asm ("nop");
 	asm ("nop");
@@ -164,6 +169,8 @@ void xxx_IRQHandler() {
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	// ISR code here.
 }
+
+
 
 
 // For the HAL timer interrupts, all of the associated Callbacks need to exist,

@@ -85,3 +85,9 @@ Binding(ALT+CTRL+U,
 
 !ENTRY fr.ac6.mcu.ide 1 1 2018-09-24 17:12:51.422
 !MESSAGE Started RMI Server, listening on port 21112
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-09-24 17:22:06.874
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-09-24 17:22:06.875
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType

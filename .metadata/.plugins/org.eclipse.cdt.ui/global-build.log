@@ -1,0 +1,9 @@
+17:01:49 **** Incremental Build of configuration Debug for project LAB-02-Template ****
+make all 
+Building target: LAB-02-Template.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/LAB-02-Template/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "LAB-02-Template.elf" @"objects.list"   -lm
+src/Lab02_intrpt.o: In function `Init_GPIO':
+/home/Ryan/Documents/MPS/MPS/LAB-02-Template/Debug/../src/Lab02_intrpt.c:108: undefined reference to `_HAL_RCC_SYSCFG_CLK_ENABLE'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:38: LAB-02-Template.elf] Error 1

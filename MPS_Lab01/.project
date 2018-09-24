@@ -34,7 +34,7 @@
 	<variableList>
 		<variable>
 			<name>STM32LIB_LOC</name>
-			<value>$%7BPARENT-1-PROJECT_LOC%7D/stm32lib</value>
+			<value>$%7BWORKSPACE_LOC%7D/stm32lib</value>
 		</variable>
 	</variableList>
 </projectDescription>

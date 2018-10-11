@@ -28,6 +28,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 	} else if (huart->Instance == USART6) {
 		// Enable GPIO Clocks
 		__GPIOC_CLK_ENABLE();
+		HAL_Delay(10);
 
 		// Initialize TX Pin
 		GPIO_InitStruct.Pin       = GPIO_PIN_6;
@@ -40,6 +41,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		// Initialize RX Pin
 		GPIO_InitStruct.Pin = GPIO_PIN_7;
 		HAL_GPIO_Init(GPIOC, &GPIO_InitStruct); //RX Config
+		HAL_Delay(10);
 
 		// Enable UART Clocking
 		__USART6_CLK_ENABLE();

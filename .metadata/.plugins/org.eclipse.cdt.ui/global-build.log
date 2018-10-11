@@ -1,6 +1,2461 @@
-18:02:43 **** Incremental Build of configuration Debug for project LAB-02-Template ****
+19:21:30 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
 make all 
-make: Nothing to be done for 'all'.
-18:02:46 **** Incremental Build of configuration Debug for project LAB-02-Template ****
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:31:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,'A');
+                       ^~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'int'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10144	    112	   1184	  11440	   2cb0	Lab03_UART_SPI.elf
+ 
+19:21:49 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:31:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,'A');
+                       ^~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'int'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10144	    112	   1184	  11440	   2cb0	Lab03_UART_SPI.elf
+ 
+19:28:57 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10152	    112	   1184	  11448	   2cb8	Lab03_UART_SPI.elf
+ 
+19:29:51 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:33:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,test);
+                       ^~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+../src/Lab03_uart.c:32:9: warning: 'test' is used uninitialized in this function [-Wuninitialized]
+   *test = 'A';
+   ~~~~~~^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10148	    112	   1184	  11444	   2cb4	Lab03_UART_SPI.elf
+ 
+19:30:37 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+make: Nothing to be done for `all'.
+19:31:05 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:33:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10152	    112	   1184	  11448	   2cb8	Lab03_UART_SPI.elf
+ 
+19:35:57 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:33:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10160	    112	   1184	  11456	   2cc0	Lab03_UART_SPI.elf
+ 
+19:38:10 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:29:17: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+  uint8_t test = "A";
+                 ^~~
+../src/Lab03_uart.c:33:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10160	    112	   1184	  11456	   2cc0	Lab03_UART_SPI.elf
+ 
+19:41:32 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:29:17: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+  uint8_t test = "A";
+                 ^~~
+../src/Lab03_uart.c:33:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10144	    112	   1184	  11440	   2cb0	Lab03_UART_SPI.elf
+ 
+19:43:00 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:33:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10136	    112	   1184	  11432	   2ca8	Lab03_UART_SPI.elf
+ 
+19:44:32 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10144	    112	   1184	  11440	   2cb0	Lab03_UART_SPI.elf
+ 
+19:45:48 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10144	    112	   1184	  11440	   2cb0	Lab03_UART_SPI.elf
+ 
+19:46:34 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10144	    112	   1184	  11440	   2cb0	Lab03_UART_SPI.elf
+ 
+19:50:23 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:26: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&USB_UART,&test);
+                          ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10148	    112	   1184	  11444	   2cb4	Lab03_UART_SPI.elf
+ 
+19:50:55 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:26: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&USB_UART,&test);
+                          ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10140	    112	   1184	  11436	   2cac	Lab03_UART_SPI.elf
+ 
+19:51:28 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10136	    112	   1184	  11432	   2ca8	Lab03_UART_SPI.elf
+ 
+19:58:31 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10136	    112	   1184	  11432	   2ca8	Lab03_UART_SPI.elf
+ 
+20:00:54 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+make: Nothing to be done for `all'.
+20:03:13 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+make: Nothing to be done for `all'.
+20:03:38 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+make: Nothing to be done for `all'.
+20:05:40 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10136	    112	   1184	  11432	   2ca8	Lab03_UART_SPI.elf
+ 
+20:05:52 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+make: Nothing to be done for `all'.
+20:07:49 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -o "src/uart.o" "../src/uart.c"
+Finished building: ../src/uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10148	    112	   1184	  11444	   2cb4	Lab03_UART_SPI.elf
+ 
+20:07:59 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10148	    112	   1184	  11444	   2cb4	Lab03_UART_SPI.elf
+ 
+16:38:16 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10148	    112	   1184	  11444	   2cb4	Lab03_UART_SPI.elf
+ 
+16:39:43 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:23: warning: pointer targets in passing argument 2 of 'uart_putchar' differ in signedness [-Wpointer-sign]
+   uart_putchar(&uart6,&test);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:26:21: warning: unused variable 'uart1' [-Wunused-variable]
+  UART_HandleTypeDef uart1;
+                     ^~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10164	    112	   1184	  11460	   2cc4	Lab03_UART_SPI.elf
+ 
+16:54:06 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:31:16: error: too few arguments to function 'uart_getchar'
+   uart1_recv = uart_getchar(&USB_UART);
+                ^~~~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:15:6: note: declared here
+ char uart_getchar(UART_HandleTypeDef *huart, uint8_t echo);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:32:16: error: too few arguments to function 'uart_getchar'
+   uart6_recv = uart_getchar(&uart6);
+                ^~~~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:15:6: note: declared here
+ char uart_getchar(UART_HandleTypeDef *huart, uint8_t echo);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:34:26: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&USB_UART,uart1_recv);
+                          ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:35:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,uart6_recv);
+                       ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:37:26: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&USB_UART,uart6_recv);
+                          ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:38:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,uart1_recv);
+                       ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+make: *** [src/Lab03_uart.o] Error 1
+16:54:40 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:26: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&USB_UART,uart1_recv);
+                          ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:35:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,uart6_recv);
+                       ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:37:26: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&USB_UART,uart6_recv);
+                          ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:38:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,uart1_recv);
+                       ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   8604	    112	   1184	   9900	   26ac	Lab03_UART_SPI.elf
+ 
+16:55:33 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:32:26: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&USB_UART,uart1_recv);
+                          ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:33:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,uart6_recv);
+                       ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:35:26: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&USB_UART,uart6_recv);
+                          ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:36:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,uart1_recv);
+                       ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6060	     12	   1172	   7244	   1c4c	Lab03_UART_SPI.elf
+ 
+16:56:20 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:32:26: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&USB_UART,uart1_recv);
+                          ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:33:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,uart6_recv);
+                       ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:35:26: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&USB_UART,uart6_recv);
+                          ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:36:23: warning: passing argument 2 of 'uart_putchar' makes pointer from integer without a cast [-Wint-conversion]
+   uart_putchar(&uart6,uart1_recv);
+                       ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6060	     12	   1172	   7244	   1c4c	Lab03_UART_SPI.elf
+ 
+17:00:49 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:32:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive' differ in signedness [-Wpointer-sign]
+   HAL_UART_Receive(&USB_UART, uart1_recv, 1, 100);
+                               ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:33:28: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive' differ in signedness [-Wpointer-sign]
+   HAL_UART_Receive(&uart6, uart6_recv, 1, 100);
+                            ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:37:26: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&USB_UART,&uart1_recv);
+                          ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char (*)[1]'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:38:23: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&uart6,&uart6_recv);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char (*)[1]'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:40:26: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&USB_UART,&uart6_recv);
+                          ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char (*)[1]'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:41:23: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&uart6,&uart1_recv);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'char (*)[1]'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6028	     12	   1172	   7212	   1c2c	Lab03_UART_SPI.elf
+ 
+17:01:21 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:37:26: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&USB_UART,&uart1_recv);
+                          ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:38:23: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&uart6,&uart6_recv);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:40:26: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&USB_UART,&uart6_recv);
+                          ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:41:23: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&uart6,&uart1_recv);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6028	     12	   1172	   7212	   1c2c	Lab03_UART_SPI.elf
+ 
+17:01:56 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:37:26: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&USB_UART,&uart1_recv);
+                          ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:38:23: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&uart6,&uart6_recv);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:40:26: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&USB_UART,&uart6_recv);
+                          ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:41:23: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+   uart_putchar(&uart6,&uart1_recv);
+                       ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6028	     12	   1172	   7212	   1c2c	Lab03_UART_SPI.elf
+ 
+17:03:30 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:38:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart1_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:39:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart1_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:43:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart6_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:44:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart6_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6040	     12	   1172	   7224	   1c38	Lab03_UART_SPI.elf
+ 
+17:04:00 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:38:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart1_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:39:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart1_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:43:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart6_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:44:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart6_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6044	     12	   1172	   7228	   1c3c	Lab03_UART_SPI.elf
+ 
+17:05:26 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:38:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart1_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:39:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart1_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:43:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart6_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:44:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart6_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10096	    112	   1184	  11392	   2c80	Lab03_UART_SPI.elf
+ 
+17:06:54 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:37:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart1_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:38:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart1_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:42:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart6_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:43:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart6_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10100	    112	   1184	  11396	   2c84	Lab03_UART_SPI.elf
+ 
+17:08:07 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:37:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart1_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:38:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart1_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:42:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart6_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:43:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart6_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10100	    112	   1184	  11396	   2c84	Lab03_UART_SPI.elf
+ 
+17:10:15 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:39:22: error: incompatible type for argument 1 of 'HAL_UART_Transmit'
+    HAL_UART_Transmit(USB_UART, uart1_recv,1, 100);
+                      ^~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'UART_HandleTypeDef * {aka struct <anonymous> *}' but argument is of type 'UART_HandleTypeDef {aka struct <anonymous>}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:46:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart6_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:47:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart6_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+make: *** [src/Lab03_uart.o] Error 1
+17:10:34 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:46:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart6_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:47:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart6_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+  10096	    112	   1184	  11392	   2c80	Lab03_UART_SPI.elf
+ 
+17:10:57 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:46:24: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&uart6,&uart6_recv);
+                        ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+../src/Lab03_uart.c:47:27: warning: passing argument 2 of 'uart_putchar' from incompatible pointer type [-Wincompatible-pointer-types]
+    uart_putchar(&USB_UART,&uart6_recv);
+                           ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:6:0,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/uart.h:17:6: note: expected 'char *' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ void uart_putchar(UART_HandleTypeDef *huart, char * input);
+      ^~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6044	     12	   1172	   7228	   1c3c	Lab03_UART_SPI.elf
+ 
+17:11:34 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:26:26: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart1_recv[1], uart6_recv[1];
+                          ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5988	     12	   1172	   7172	   1c04	Lab03_UART_SPI.elf
+ 
+17:12:35 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:26:26: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart1_recv[1], uart6_recv[1];
+                          ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5988	     12	   1172	   7172	   1c04	Lab03_UART_SPI.elf
+ 
+17:13:21 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:31:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:32:31: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Transmit(&USB_UART,& uart1_recv,1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:26:26: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart1_recv[1], uart6_recv[1];
+                          ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5988	     12	   1172	   7172	   1c04	Lab03_UART_SPI.elf
+ 
+17:14:53 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:26:24: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint8_t uart1_recv = " ";
+                        ^~~
+../src/Lab03_uart.c:27:24: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint8_t uart6_recv = " ";
+                        ^~~
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv = " ";
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1172	   7188	   1c14	Lab03_UART_SPI.elf
+ 
+17:15:14 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:26:25: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   uint8_t* uart1_recv = "  ";
+                         ^~~~
+../src/Lab03_uart.c:27:25: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   uint8_t* uart6_recv = "  ";
+                         ^~~~
+../src/Lab03_uart.c:32:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t ** {aka unsigned char **}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:33:31: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Transmit(&USB_UART,& uart1_recv,1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t ** {aka unsigned char **}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:27:12: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t* uart6_recv = "  ";
+            ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1172	   7188	   1c14	Lab03_UART_SPI.elf
+ 
+17:15:41 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:32:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char **'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:33:31: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Transmit(&USB_UART,& uart1_recv,1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char **'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:27:9: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   char* uart6_recv = "  ";
+         ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1172	   7188	   1c14	Lab03_UART_SPI.elf
+ 
+17:15:57 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:32:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive' differ in signedness [-Wpointer-sign]
+   HAL_UART_Receive(&USB_UART, uart1_recv, 1, 10);
+                               ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:33:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   HAL_UART_Transmit(&USB_UART,uart1_recv,1, 10);
+                               ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:27:9: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   char* uart6_recv = "  ";
+         ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5996	     12	   1172	   7180	   1c0c	Lab03_UART_SPI.elf
+ 
+17:16:25 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:26:31: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   unsigned char* uart1_recv = "  ";
+                               ^~~~
+../src/Lab03_uart.c:27:31: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   unsigned char* uart6_recv = "  ";
+                               ^~~~
+../src/Lab03_uart.c:27:18: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   unsigned char* uart6_recv = "  ";
+                  ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5996	     12	   1172	   7180	   1c0c	Lab03_UART_SPI.elf
+ 
+17:16:59 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:32:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, uart1_recv, 1, 10);
+                               ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'unsigned char **'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:33:31: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Transmit(&USB_UART,uart1_recv,1, 10);
+                               ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'unsigned char **'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:27:18: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   unsigned char* uart6_recv[2];
+                  ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5988	     12	   1172	   7172	   1c04	Lab03_UART_SPI.elf
+ 
+17:17:33 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:32:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, uart1_recv, 1, 10);
+                               ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t ** {aka unsigned char **}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:33:31: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Transmit(&USB_UART,uart1_recv,1, 10);
+                               ^~~~~~~~~~
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t ** {aka unsigned char **}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:27:12: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t* uart6_recv[2];
+            ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5988	     12	   1172	   7172	   1c04	Lab03_UART_SPI.elf
+ 
+17:18:05 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5988	     12	   1172	   7172	   1c04	Lab03_UART_SPI.elf
+ 
+17:18:26 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+make: Nothing to be done for `all'.
+17:19:20 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5992	     12	   1172	   7176	   1c08	Lab03_UART_SPI.elf
+ 
+17:19:59 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:29:14: error: assignment to expression with array type
+   uart1_recv = uart_getchar(&USB_UART,1);
+              ^
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+../src/Lab03_uart.c:26:11: warning: variable 'uart1_recv' set but not used [-Wunused-but-set-variable]
+   uint8_t uart1_recv[2];
+           ^~~~~~~~~~
+make: *** [src/Lab03_uart.o] Error 1
+17:20:37 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+../src/Lab03_uart.c:26:11: warning: variable 'uart1_recv' set but not used [-Wunused-but-set-variable]
+   uint8_t uart1_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6012	     12	   1172	   7196	   1c1c	Lab03_UART_SPI.elf
+ 
+17:22:38 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5992	     12	   1172	   7176	   1c08	Lab03_UART_SPI.elf
+ 
+17:24:04 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5988	     12	   1172	   7172	   1c04	Lab03_UART_SPI.elf
+ 
+17:24:32 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5988	     12	   1172	   7172	   1c04	Lab03_UART_SPI.elf
+ 
+17:24:44 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:32:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 1000);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[2] {aka unsigned char (*)[2]}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:33:31: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Transmit(&USB_UART,&uart1_recv,1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[2] {aka unsigned char (*)[2]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5988	     12	   1172	   7172	   1c04	Lab03_UART_SPI.elf
+ 
+17:26:43 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:14: error: assignment to expression with array type
+   uart1_recv = getchar();
+              ^
+../src/Lab03_uart.c:35:11: warning: passing argument 1 of 'putchar' makes integer from pointer without a cast [-Wint-conversion]
+   putchar(uart1_recv);
+           ^~~~~~~~~~
+In file included from /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/arm-none-eabi/include/stdio.h:29:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h:50,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h:47,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:256,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/arm-none-eabi/include/stdio.h:220:5: note: expected 'int' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(putchar, (int));
+     ^
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+make: *** [src/Lab03_uart.o] Error 1
+17:27:16 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9040	    112	   1184	  10336	   2860	Lab03_UART_SPI.elf
+ 
+17:28:51 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9032	    112	   1184	  10328	   2858	Lab03_UART_SPI.elf
+ 
+17:29:13 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9040	    112	   1184	  10336	   2860	Lab03_UART_SPI.elf
+ 
+17:30:17 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:32:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[2] {aka unsigned char (*)[2]}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:33:31: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Transmit(&USB_UART,&uart1_recv,1, 1000);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[2] {aka unsigned char (*)[2]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:27:11: warning: unused variable 'uart6_recv' [-Wunused-variable]
+   uint8_t uart6_recv[2];
+           ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7656	    112	   1184	   8952	   22f8	Lab03_UART_SPI.elf
+ 
+17:31:49 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:35:6: warning: the address of 'uart1_recv' will always evaluate as 'true' [-Waddress]
+   if(uart1_recv){
+      ^~~~~~~~~~
+../src/Lab03_uart.c:36:32: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&USB_UART,&uart1_recv,1, 1000);
+                                ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:26:10: warning: variable 'uart6_recv' set but not used [-Wunused-but-set-variable]
+  uint8_t uart6_recv[1];
+          ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7664	    112	   1184	   8960	   2300	Lab03_UART_SPI.elf
+ 
+17:32:26 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 10);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:35:6: warning: the address of 'uart1_recv' will always evaluate as 'true' [-Waddress]
+   if(uart1_recv){
+      ^~~~~~~~~~
+../src/Lab03_uart.c:36:32: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&USB_UART,&uart1_recv,1, 1000);
+                                ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:26:10: warning: variable 'uart6_recv' set but not used [-Wunused-but-set-variable]
+  uint8_t uart6_recv[1];
+          ^~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7672	    112	   1184	   8968	   2308	Lab03_UART_SPI.elf
+ 
+17:35:38 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'main':
+../src/Lab03_uart.c:34:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 100);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:35:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart6_recv, 1, 100);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:38:32: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&USB_UART,&uart1_recv,1, 10);
+                                ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:39:29: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
+                             ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:43:29: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
+                             ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:44:29: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&uart6,&uart6_recv,1, 10);
+                             ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7736	    112	   1184	   9032	   2348	Lab03_UART_SPI.elf
+ 
+17:38:50 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make all 
+Building file: ../src/Lab03_uart.c
+Invoking: MCU GCC Compiler
+/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
+../src/Lab03_uart.c: In function 'polling_receive':
+../src/Lab03_uart.c:21:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 100);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:22:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+   HAL_UART_Receive(&USB_UART, &uart6_recv, 1, 100);
+                               ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:25:32: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&USB_UART,&uart1_recv,1, 10);
+                                ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:26:22: warning: passing argument 1 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
+                      ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'UART_HandleTypeDef * {aka struct <anonymous> *}' but argument is of type 'UART_HandleTypeDef ** {aka struct <anonymous> **}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:26:29: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
+                             ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:30:22: warning: passing argument 1 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
+                      ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'UART_HandleTypeDef * {aka struct <anonymous> *}' but argument is of type 'UART_HandleTypeDef ** {aka struct <anonymous> **}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:30:29: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
+                             ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:31:22: warning: passing argument 1 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&uart6,&uart6_recv,1, 10);
+                      ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'UART_HandleTypeDef * {aka struct <anonymous> *}' but argument is of type 'UART_HandleTypeDef ** {aka struct <anonymous> **}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/Lab03_uart.c:31:29: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+    HAL_UART_Transmit(&uart6,&uart6_recv,1, 10);
+                             ^
+In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
+                 from ../src/Lab03_uart.c:12:
+/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+Finished building: ../src/Lab03_uart.c
+ 
+Building target: Lab03_UART_SPI.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
+arm-none-eabi-size "Lab03_UART_SPI.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7756	    112	   1184	   9052	   235c	Lab03_UART_SPI.elf
+ 

@@ -1,0 +1,23 @@
+//------------------------------------
+// Lab 3 - Part 1: UART - Lab03_uart.c
+//------------------------------------
+//
+
+/*
+ * UART information:
+ * 	textbook page 221
+ * 	reference manual page 1241
+ */
+#include "init.h"
+
+// Main Execution Loop
+int main(void) {
+	//Initialize the system
+	Sys_Init();
+
+	//Initialize GPIO for UART
+	HAL_UART_MspInit();
+
+	// Lost? Check out uart.c!
+
+}

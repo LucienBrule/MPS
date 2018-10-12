@@ -1,0 +1,43 @@
+//------------------------------------
+// Lab 3 - Part 1: UART - Lab03_uart.c
+//------------------------------------
+//
+
+#include "init.h"
+
+// Main Execution Loop
+int main(void) {
+	//Initialize the system
+	Sys_Init();
+	HAL_Init();
+
+	UART_HandleTypeDef usart6;
+
+	initUart(&usart6, 9600, USART6);
+	uart_print(&USB_UART, "Start\r\n");
+	uart_print(&usart6, "Start\r\n");
+
+
+
+	while(1){
+		HAL_Delay(100);
+		char u1,u6;
+		u1 = uart_getchar(&USB_UART, 1);
+		u6 = uart_getchar(&usart6,1);
+
+		if(u1){
+			//uart_putchar(&USB_UART, u1);
+			uart_putchar(&usart6, u1);
+		}else if(u6){
+			uart_putchar(&USB_UART, u6);
+			//uart_putchar(&usart6, u6);
+
+		}
+
+	}
+
+	printf("Your code here!\r\n");
+
+	// Lost? Check out uart.c!
+
+}

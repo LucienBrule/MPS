@@ -1,0 +1,31 @@
+//------------------------------------
+// Lab 3 - Part 1: UART - Lab03_uart.c
+//------------------------------------
+//
+
+#include "init.h"
+#include "spi.c"
+
+// Main Execution Loop
+int main(void) {
+	//Initialize the system
+	Sys_Init();
+	HAL_Init();
+
+	SPI_HandleTypeDef spi2;
+
+	initSPI(&spi2, SPI2);
+
+	uint8_t dump[1];
+
+	HAL_SPI_Transmit(&spi2,dump,1,1000);
+
+	HAL_SPI_Receive(&spi2,dump, 1, 1000);
+
+	printf("%c", dump[0]);
+
+	printf("Your code here!\r\n");
+
+	// Lost? Check out uart.c!
+
+}

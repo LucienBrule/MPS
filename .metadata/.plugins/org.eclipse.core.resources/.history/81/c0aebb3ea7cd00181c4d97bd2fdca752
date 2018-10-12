@@ -1,0 +1,54 @@
+#include "init.h"
+
+void initSPI(SPI_HandleTypeDef *Shand, SPI_TypeDef *Tgt){
+	Shand -> Instance = Tgt;
+	Shand -> Init.Mode  = SPI_MODE_MASTER;
+	Shand -> Init.Direction = SPI_DIRECTION_2LINES;
+	Shand -> Init.DataSize = SPI_DATASIZE_8BIT;
+	Shand -> Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_128;
+	Shand -> Init.TIMode = SPI_TIMODE_DISABLE;
+
+	HAL_SPI_Init(Shand);
+
+}
+
+void HAL_SPI_MspInit(SPI_HandleTypeDef *hspi){
+	__GPIOC_CLK_ENABLE();
+	__GPIOB_CLK_ENABLE();
+
+	GPIO_InitTypeDef GPIOStruct;
+
+	GPIOStruct.Pin = GPIO_PIN_1;
+	GPIOStruct.Mode = GPIO_MODE_AF_PP;
+	GPIOStruct.Pull = GPIO_PULLUP;
+	GPIOStruct.Speed= GPIO_SPEED_HIGH;
+	GPIOStruct.Alternate = GPIO_AF7_SPI2;
+
+	HAL_GPIO_Init(GPIOC, &GPIOStruct);
+
+	GPIOStruct.Pin = GPIO_PIN_2;
+
+	HAL_GPIO_Init(GPIOC, &GPIOStruct);
+
+	GPIOStruct.Pin = GPIO_PIN_10;
+
+	HAL_GPIO_Init(GPIOB, &GPIOStruct);
+
+	__SPI2_CLK_ENABLE();
+
+}
+
+
+
+char spi_getchar(SPI_HandleTypeDef *hspi, uint8_t echo) {
+	char input[1];
+	HAL_UART_Receive(hspi, (uint8_t *)input, 1, HAL_MAX_DELAY);
+	if (echo) HAL_UART_Transmit(hspi, (uint8_t*) input, 1, 1000);
+	return (char)input[0];
+}
+
+// Send one character
+void uart_putchar(SPI_HandleTypeDef *hspi, char * input) {
+	HAL_UART_Transmit(hspi, (uint8_t*) input, 1, 1000);
+}
+

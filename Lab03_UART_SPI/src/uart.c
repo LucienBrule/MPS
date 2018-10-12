@@ -43,6 +43,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 
 		// Enable UART Clocking
 		__USART6_CLK_ENABLE();
+		fflush(0);
 
 	}
 }

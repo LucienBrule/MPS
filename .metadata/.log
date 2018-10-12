@@ -673,3 +673,6 @@ org.apache.http.conn.ConnectTimeoutException: Connect to download.eclipse.org:80
 
 !ENTRY org.eclipse.cdt.core 1 0 2018-10-12 15:49:32.734
 !MESSAGE Indexed 'MPS_Lab01' (12 sources, 70 headers) in 2.17 sec: 4,229 declarations; 17,831 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-10-12 16:07:34.227
+!MESSAGE Indexed 'Lab03_UART_SPI-SecondAttempt' (14 sources, 70 headers) in 1.97 sec: 4,734 declarations; 24,432 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)

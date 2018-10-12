@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Lab03_UART_SPI-SecondAttempt/src/Lab03_uart.c&apos; to &apos;Lab03_spi2.c&apos;" description="Rename resource &apos;Lab03_uart.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Lab03_uart.c" name="Lab03_spi2.c" stamp="1539375227469" updateReferences="true"/>
+</session>

@@ -28,13 +28,13 @@ int main(void) {
 		kbd[0] = getchar();
 
 		//spi_putchar(spi2,kbd[0]);
-		HAL_SPI_TransmitReceive(&spi2, kbd, spi,1,100);
+		HAL_SPI_Transmit(&spi2,kbd,1,100);
 
 		HAL_Delay(10);
 
 		//spi[0] =spi_getchar(spi2,0);
 
-		//HAL_SPI_Receive(&spi2,spi, 1, 100);
+		HAL_SPI_Receive(&spi2,spi, 1, 100);
 
 		printf("Received from keyboard: %x \r\n----\r\n Received from SPI: %x\r\n", kbd[0],spi[0]);
 

@@ -90,19 +90,16 @@ int main(void)
 
 	printf("Your code here!\r\n");
 
-	uint8_t kbd[1],sp[1],dummy[1];
+	uint8_t kbd[1],sp[1];
 
 	while(1){
 		kbd[0] = 0x00;
 		sp[0] = 0x00;
-		dummy[0] = 0x11;
 
 		kbd[0] = getchar();
 
 		//spi_putchar(spi2,kbd[0]);
-		HAL_SPI_TransmitReceive(&spi2, kbd, dummy,1,100);
-
-		HAL_SPI_TransmitReceive(&spi2,dummy,sp,1,100);
+		HAL_SPI_TransmitReceive(&spi2, kbd, sp,1,100);
 
 		HAL_Delay(10);
 

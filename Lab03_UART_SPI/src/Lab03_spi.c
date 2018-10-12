@@ -54,12 +54,14 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef *hspi)
 	{
 		// Enable SPI GPIO port clocks, set HAL GPIO init structure's values for each
 		// SPI-related port pin (SPI port pin configuration), enable SPI IRQs (if applicable), etc.
-
+		__HAL_RCC_GPIOB_CLK_ENABLE();
+		__HAL_RCC_GPIOA_CLK_ENABLE();
+		printf("init\r\n");
 		gpio.Pin = GPIO_PIN_15;
 		gpio.Mode = GPIO_MODE_AF_PP;
 		gpio.Pull = GPIO_PULLUP;
-		gpio.Speed= GPIO_SPEED_HIGH;
-		gpio.Alternate = GPIO_AF7_SPI2;
+		gpio.Speed= GPIO_SPEED_MEDIUM;
+		gpio.Alternate = GPIO_AF5_SPI2;
 
 		HAL_GPIO_Init(GPIOB, &gpio);
 
@@ -88,6 +90,27 @@ int main(void)
 	// For convenience
 	configureSPI();
 
+	__HAL_RCC_GPIOC_CLK_ENABLE();
+	GPIO_InitTypeDef g;
+	g.Pin = 6;
+	g.Mode = GPIO_MODE_OUTPUT_PP;
+	g.Pull = GPIO_PULLDOWN;
+	g.Speed = GPIO_SPEED_HIGH;
+
+	HAL_GPIO_Init(GPIOC, &g);
+
+	HAL_GPIO_TogglePin(GPIOC, 6);
+	getchar();
+
+	HAL_GPIO_WritePin(GPIOC,6,GPIO_PIN_SET);
+
+	HAL_GPIO_WritePin(GPIOA, 12,GPIO_PIN_SET);
+	HAL_Delay(100);
+	HAL_GPIO_TogglePin(GPIOA, 12);
+	HAL_Delay(100);
+
+	getchar();
+
 	printf("Your code here!\r\n");
 
 	uint8_t kbd[1],sp[1],dummy[1];
@@ -97,12 +120,15 @@ int main(void)
 		sp[0] = 0x00;
 		dummy[0] = 0x11;
 
-		kbd[0] = getchar();
+		kbd[0] = 0xcc;
 
 		//spi_putchar(spi2,kbd[0]);
-		HAL_SPI_TransmitReceive(&spi2, kbd, dummy,1,100);
 
-		HAL_SPI_TransmitReceive(&spi2,dummy,sp,1,100);
+		HAL_SPI_Transmit(&spi2, kbd,1,100);
+
+
+
+		//HAL_SPI_TransmitReceive(&spi2,dummy,sp,1,100);
 
 		HAL_Delay(10);
 
@@ -112,7 +138,7 @@ int main(void)
 
 		printf("Received from keyboard: %x \r\n----\r\n Received from SPI: %x\r\n", kbd[0],sp[0]);
 
-		fflush(0);
+		//fflush(0);
 		}
 
 // See 769 Description of HAL drivers.pdf, Ch. 58.2.3 or stm32f7xx_hal_spi.c

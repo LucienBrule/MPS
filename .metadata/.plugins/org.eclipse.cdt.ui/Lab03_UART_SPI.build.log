@@ -1,9 +1,13 @@
-14:14:06 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+15:38:10 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
 make all 
 Building file: ../src/Lab03_spi.c
 Invoking: MCU GCC Compiler
 /home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI/Debug
 arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi.d" -MT"src/Lab03_spi.o" -o "src/Lab03_spi.o" "../src/Lab03_spi.c"
+../src/Lab03_spi.c: In function 'main':
+../src/Lab03_spi.c:116:23: warning: variable 'dummy' set but not used [-Wunused-but-set-variable]
+  uint8_t kbd[1],sp[1],dummy[1];
+                       ^~~~~
 Finished building: ../src/Lab03_spi.c
  
 Building target: Lab03_UART_SPI.elf
@@ -16,8 +20,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
 arm-none-eabi-size "Lab03_UART_SPI.elf"
    text	   data	    bss	    dec	    hex	filename
-  12572	    112	   1288	  13972	   3694	Lab03_UART_SPI.elf
+  12140	    112	   1288	  13540	   34e4	Lab03_UART_SPI.elf
  
 
-14:14:06 Build Finished (took 368ms)
+15:38:10 Build Finished (took 373ms)
 

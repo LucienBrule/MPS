@@ -1,40 +1,6 @@
-14:14:03 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+15:50:57 **** Incremental Build of configuration Debug for project MPS_Lab01 ****
 make all 
-Building file: ../src/Lab03_spi.c
-Invoking: MCU GCC Compiler
-/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI/Debug
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi.d" -MT"src/Lab03_spi.o" -o "src/Lab03_spi.o" "../src/Lab03_spi.c"
-Finished building: ../src/Lab03_spi.c
- 
-Building target: Lab03_UART_SPI.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
-Finished building target: Lab03_UART_SPI.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
-arm-none-eabi-size "Lab03_UART_SPI.elf"
-   text	   data	    bss	    dec	    hex	filename
-  12572	    112	   1288	  13972	   3694	Lab03_UART_SPI.elf
- 
-14:14:06 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+make: Nothing to be done for 'all'.
+15:51:00 **** Incremental Build of configuration Debug for project MPS_Lab01 ****
 make all 
-Building file: ../src/Lab03_spi.c
-Invoking: MCU GCC Compiler
-/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI/Debug
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi.d" -MT"src/Lab03_spi.o" -o "src/Lab03_spi.o" "../src/Lab03_spi.c"
-Finished building: ../src/Lab03_spi.c
- 
-Building target: Lab03_UART_SPI.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI.elf" @"objects.list"   -lm
-Finished building target: Lab03_UART_SPI.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
-arm-none-eabi-size "Lab03_UART_SPI.elf"
-   text	   data	    bss	    dec	    hex	filename
-  12572	    112	   1288	  13972	   3694	Lab03_UART_SPI.elf
- 
+make: Nothing to be done for 'all'.

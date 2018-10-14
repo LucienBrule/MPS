@@ -4,3 +4,5 @@ configDescList=org.eclipse.launchbar.core.descriptorType.default\:LAB-02-Templat
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:LAB-02-Template\ Run/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:LAB-02-Template\ Run/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:MPS_Lab01\ Run/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:MPS_Lab01\ Run/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

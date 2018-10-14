@@ -15,18 +15,33 @@
 // See 769 Description of HAL drivers.pdf, Ch. 58.1 or stm32f7xx_hal_spi.c
 
 SPI_HandleTypeDef spi2;
+uint32_t bufferKbd, bufferSpi;
 
 void task3(){
-	uint8_t i[1], o[1];
+	uint8_t i[1], o[1], index;
 
+	index = 0;
 	while(1){
 		i[0] = 0x00;
 		o[0] = 0x00;
-		printf("Enter something\r\n");
+		//printf("Enter something\r\n");
 		o[0] = getchar();
 		HAL_SPI_TransmitReceive(&spi2, o,i,1,100);
 
-		printf("Recieved %c; Transmitted %c\r\n", i[0], o[0]);
+		printf("\033[2J");
+//		printf("\033[1;0Kbd %c\r\n\nSPI%c", o[0],i[0]);
+		printf("KBD: %c \r\n",o[0]);
+		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+		printf("SPI: %c \r\n",i[0]);
+		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+
+
+
+
+
+
+		index++;
 	}
 
 }
@@ -129,6 +144,9 @@ int main(void)
 
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
 	printf("Your code here!\r\n");
+
+
+	task3();
 
 
 // See 769 Description of HAL drivers.pdf, Ch. 58.2.3 or stm32f7xx_hal_spi.c

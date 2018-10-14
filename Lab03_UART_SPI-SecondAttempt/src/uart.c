@@ -144,3 +144,6 @@ int uart_getline(UART_HandleTypeDef *huart, char * input, int max_size)
 	}
   return i; // The way this is set up, it will always report the wrong size
 }
+
+
+

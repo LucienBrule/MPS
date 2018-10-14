@@ -1,4 +1,4 @@
-17:03:06 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+15:26:01 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
 make all 
 Building file: ../src/Lab03_spi2.c
 Invoking: MCU GCC Compiler
@@ -16,9 +16,12 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
 arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
    text	   data	    bss	    dec	    hex	filename
-  12676	    112	   1288	  14076	   36fc	Lab03_UART_SPI-SecondAttempt.elf
+  12732	    112	   1296	  14140	   373c	Lab03_UART_SPI-SecondAttempt.elf
  
-17:03:09 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+15:26:05 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+make: Nothing to be done for 'all'.
+15:26:45 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
 make all 
 Building file: ../src/Lab03_spi2.c
 Invoking: MCU GCC Compiler
@@ -36,5 +39,445 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
 arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
    text	   data	    bss	    dec	    hex	filename
-  12676	    112	   1288	  14076	   36fc	Lab03_UART_SPI-SecondAttempt.elf
+  12708	    112	   1296	  14116	   3724	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:29:39 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12736	    112	   1296	  14144	   3740	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:30:04 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12700	    112	   1296	  14108	   371c	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:30:40 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12672	    112	   1296	  14080	   3700	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:30:58 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12664	    112	   1296	  14072	   36f8	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:31:38 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12668	    112	   1296	  14076	   36fc	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:34:13 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12680	    112	   1296	  14088	   3708	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:34:39 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12680	    112	   1296	  14088	   3708	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:35:23 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12660	    112	   1296	  14068	   36f4	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:35:44 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12660	    112	   1296	  14068	   36f4	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:36:09 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12660	    112	   1296	  14068	   36f4	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:38:21 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12644	    112	   1296	  14052	   36e4	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:40:01 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12660	    112	   1296	  14068	   36f4	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:41:55 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12656	    112	   1296	  14064	   36f0	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:42:20 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12676	    112	   1296	  14084	   3704	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:42:52 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12692	    112	   1296	  14100	   3714	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:43:22 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12688	    112	   1296	  14096	   3710	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:43:53 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12696	    112	   1296	  14104	   3718	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:44:12 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12708	    112	   1296	  14116	   3724	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:44:23 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12720	    112	   1296	  14128	   3730	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:44:46 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12740	    112	   1296	  14148	   3744	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:45:21 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12744	    112	   1296	  14152	   3748	Lab03_UART_SPI-SecondAttempt.elf
+ 
+15:45:29 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+make all 
+Building file: ../src/Lab03_spi2.c
+Invoking: MCU GCC Compiler
+/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/inc" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/home/Ryan/Documents/MPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_spi2.d" -MT"src/Lab03_spi2.o" -o "src/Lab03_spi2.o" "../src/Lab03_spi2.c"
+Finished building: ../src/Lab03_spi2.c
+ 
+Building target: Lab03_UART_SPI-SecondAttempt.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -specs=nosys.specs -specs=nano.specs -T"/home/Ryan/Documents/MPS/MPS/Lab03_UART_SPI-SecondAttempt/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab03_UART_SPI-SecondAttempt.elf" @"objects.list"   -lm
+Finished building target: Lab03_UART_SPI-SecondAttempt.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
+arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12724	    112	   1296	  14132	   3734	Lab03_UART_SPI-SecondAttempt.elf
  

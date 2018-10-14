@@ -1,4 +1,4 @@
-17:03:09 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
+15:45:29 **** Incremental Build of configuration Debug for project Lab03_UART_SPI-SecondAttempt ****
 make all 
 Building file: ../src/Lab03_spi2.c
 Invoking: MCU GCC Compiler
@@ -16,8 +16,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Lab03_UART_SPI-SecondAttempt.elf" "Lab03_UART_SPI-SecondAttempt.bin"
 arm-none-eabi-size "Lab03_UART_SPI-SecondAttempt.elf"
    text	   data	    bss	    dec	    hex	filename
-  12676	    112	   1288	  14076	   36fc	Lab03_UART_SPI-SecondAttempt.elf
+  12724	    112	   1296	  14132	   3734	Lab03_UART_SPI-SecondAttempt.elf
  
 
-17:03:09 Build Finished (took 377ms)
+15:45:29 Build Finished (took 375ms)
 

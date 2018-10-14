@@ -26,25 +26,28 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		__USART1_CLK_ENABLE();
 
 	} else if (huart->Instance == USART6) {
+		// Enable UART Clocking
+		__USART6_CLK_ENABLE();
+		__HAL_RCC_USART6_CLK_ENABLE();
+		__HAL_RCC_GPIOC_CLK_ENABLE();
+
 		// Enable GPIO Clocks
 		__GPIOC_CLK_ENABLE();
 		HAL_Delay(10);
 
-		// Initialize TX Pin
-		GPIO_InitStruct.Pin       = GPIO_PIN_6;
+		// Initialize TX Pin board pin 42 to orange?
+		// Initialize RX Pin board pin 44 to red?
+		GPIO_InitStruct.Pin       = GPIO_PIN_6 | GPIO_PIN_7;
 		GPIO_InitStruct.Mode      = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull      = GPIO_PULLUP;
-		GPIO_InitStruct.Speed     = GPIO_SPEED_HIGH;
+		GPIO_InitStruct.Pull      = GPIO_NOPULL;
+		GPIO_InitStruct.Speed     = GPIO_SPEED_LOW;
 		GPIO_InitStruct.Alternate = GPIO_AF8_USART6;
-		HAL_GPIO_Init(GPIOC, &GPIO_InitStruct); //TX Config
 
-		// Initialize RX Pin
-		GPIO_InitStruct.Pin = GPIO_PIN_7;
-		HAL_GPIO_Init(GPIOC, &GPIO_InitStruct); //RX Config
+		HAL_GPIO_Init(GPIOC, &GPIO_InitStruct); //TX RX Config
+
+
 		HAL_Delay(10);
 
-		// Enable UART Clocking
-		__USART6_CLK_ENABLE();
 
 	}
 }

@@ -1,100 +1,9 @@
-17:38:50 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+15:51:53 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
 make all 
 Building file: ../src/Lab03_uart.c
 Invoking: MCU GCC Compiler
 /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/Debug
 arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -DUSE_HAL_DRIVER -DSTM32F769xx -DUSE_STM32F769I_DISCO -I"/Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/CMSIS/Include" -I"/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc" -Og -g3 -Wall -fmessage-length=0 -Wdouble-promotion -ffunction-sections -c -MMD -MP -MF"src/Lab03_uart.d" -MT"src/Lab03_uart.o" -o "src/Lab03_uart.o" "../src/Lab03_uart.c"
-../src/Lab03_uart.c: In function 'polling_receive':
-../src/Lab03_uart.c:21:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
-   HAL_UART_Receive(&USB_UART, &uart1_recv, 1, 100);
-                               ^
-In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
-                 from ../src/Lab03_uart.c:12:
-/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
- HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~
-../src/Lab03_uart.c:22:31: warning: passing argument 2 of 'HAL_UART_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
-   HAL_UART_Receive(&USB_UART, &uart6_recv, 1, 100);
-                               ^
-In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
-                 from ../src/Lab03_uart.c:12:
-/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1140:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
- HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~
-../src/Lab03_uart.c:25:32: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
-    HAL_UART_Transmit(&USB_UART,&uart1_recv,1, 10);
-                                ^
-In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
-                 from ../src/Lab03_uart.c:12:
-/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
- HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../src/Lab03_uart.c:26:22: warning: passing argument 1 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
-    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
-                      ^
-In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
-                 from ../src/Lab03_uart.c:12:
-/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'UART_HandleTypeDef * {aka struct <anonymous> *}' but argument is of type 'UART_HandleTypeDef ** {aka struct <anonymous> **}'
- HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../src/Lab03_uart.c:26:29: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
-    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
-                             ^
-In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
-                 from ../src/Lab03_uart.c:12:
-/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
- HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../src/Lab03_uart.c:30:22: warning: passing argument 1 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
-    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
-                      ^
-In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
-                 from ../src/Lab03_uart.c:12:
-/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'UART_HandleTypeDef * {aka struct <anonymous> *}' but argument is of type 'UART_HandleTypeDef ** {aka struct <anonymous> **}'
- HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../src/Lab03_uart.c:30:29: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
-    HAL_UART_Transmit(&uart6,&uart1_recv,1, 10);
-                             ^
-In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
-                 from ../src/Lab03_uart.c:12:
-/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
- HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../src/Lab03_uart.c:31:22: warning: passing argument 1 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
-    HAL_UART_Transmit(&uart6,&uart6_recv,1, 10);
-                      ^
-In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
-                 from ../src/Lab03_uart.c:12:
-/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'UART_HandleTypeDef * {aka struct <anonymous> *}' but argument is of type 'UART_HandleTypeDef ** {aka struct <anonymous> **}'
- HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../src/Lab03_uart.c:31:29: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
-    HAL_UART_Transmit(&uart6,&uart6_recv,1, 10);
-                             ^
-In file included from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/stm32f7xx_hal_conf.h:388:0,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
-                 from /Users/lucienbrule/Developer/otherMPS/MPS/Lab03_UART_SPI/inc/init.h:5,
-                 from ../src/Lab03_uart.c:12:
-/Users/lucienbrule/Developer/otherMPS/MPS/stm32lib/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1139:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[1] {aka unsigned char (*)[1]}'
- HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
 Finished building: ../src/Lab03_uart.c
  
 Building target: Lab03_UART_SPI.elf
@@ -107,8 +16,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Lab03_UART_SPI.elf" "Lab03_UART_SPI.bin"
 arm-none-eabi-size "Lab03_UART_SPI.elf"
    text	   data	    bss	    dec	    hex	filename
-   7756	    112	   1184	   9052	   235c	Lab03_UART_SPI.elf
+   9616	    112	   1304	  11032	   2b18	Lab03_UART_SPI.elf
  
 
-17:38:51 Build Finished (took 1s.51ms)
+15:51:53 Build Finished (took 495ms)
 

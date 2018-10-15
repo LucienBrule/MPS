@@ -1,4 +1,3 @@
-"src/Lab1-Main.o"
 "src/hello.o"
 "src/init.o"
 "src/uart.o"

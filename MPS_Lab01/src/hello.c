@@ -64,28 +64,28 @@ int main(void) {
 		pot = (GPIOJ->IDR) & 0x0001;
 
 		//Check if the switches are enabled, then turn on corresponding LED accordingly
-		if (s1 == 0x0080) {
+		if (s1 != 0x0080) {
 
 			GPIOJ->BSRR = (uint16_t) GPIO_PIN_13;
 		} else {
 			GPIOJ->BSRR = (uint16_t) GPIO_PIN_13 << 16;
 		}
 
-		if (s2 == 0x0040) {
+		if (s2 != 0x0040) {
 
 			GPIOJ->BSRR = (uint16_t) GPIO_PIN_5;
 		} else {
 			GPIOJ->BSRR = (uint16_t) GPIO_PIN_5 << 16;
 		}
 
-		if (s3 == 0x0002) {
+		if (s3 != 0x0002) {
 
 			GPIOA->BSRR = (uint16_t) GPIO_PIN_12;
 		} else {
 			GPIOA->BSRR = (uint16_t) GPIO_PIN_12 << 16;
 		}
 
-		if (s4 == 0x0040) {
+		if (s4 != 0x0040) {
 			GPIOD->BSRR = (uint16_t) GPIO_PIN_4 << 16;
 		} else {
 			GPIOD->BSRR = (uint16_t) GPIO_PIN_4;

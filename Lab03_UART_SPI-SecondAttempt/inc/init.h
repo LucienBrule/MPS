@@ -10,8 +10,4 @@ void SystemClock_Config(void);
 void CPU_CACHE_Enable(void);
 void Sys_Init(void);
 
-//Custom Function Prototypes
-void initSPI(SPI_HandleTypeDef *Shand, SPI_TypeDef *Tgt);
-void HAL_SPI_MspInit(SPI_HandleTypeDef *hspi);
-
 #endif

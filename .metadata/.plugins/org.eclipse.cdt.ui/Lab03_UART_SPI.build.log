@@ -1,4 +1,4 @@
-15:51:53 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
+19:02:11 **** Incremental Build of configuration Debug for project Lab03_UART_SPI ****
 make all 
 Building file: ../src/Lab03_uart.c
 Invoking: MCU GCC Compiler
@@ -19,5 +19,5 @@ arm-none-eabi-size "Lab03_UART_SPI.elf"
    9616	    112	   1304	  11032	   2b18	Lab03_UART_SPI.elf
  
 
-15:51:53 Build Finished (took 495ms)
+19:02:12 Build Finished (took 1s.89ms)
 

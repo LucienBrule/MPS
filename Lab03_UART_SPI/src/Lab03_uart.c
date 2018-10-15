@@ -10,6 +10,7 @@
  * 	USART1 and 6 setup in uart.c
  */
 #include "init.h"
+#include <stdlib.h>
 UART_HandleTypeDef uart6;
 uint8_t uart_it_recv[1] = {0x00};
 void polling_receive(){
@@ -21,6 +22,13 @@ void polling_receive(){
 		// get char from each uart
 		HAL_UART_Receive(&uart6, uart6_recv, 1, 0);
 		HAL_UART_Receive(&USB_UART, uart1_recv, 1, 0);
+
+		if(uart1_recv[0] == 27 || uart6_recv[0] == 27){
+			printf("\r\nEXITING\r\n");
+			uart_print(&uart6,"\r\nEXITING\r\n");
+			exit(EXIT_SUCCESS);
+		}
+
 //		printf("uart6_recv: %x\r\n", uart6_recv[0]);
 		if(uart1_recv[0]){
 			HAL_UART_Transmit(&USB_UART,uart1_recv,1, 0);

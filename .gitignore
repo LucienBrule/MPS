@@ -1,3 +1,7 @@
+#ignore eclipse metadata
+.metadata/
+.settings/
+
 # Prerequisites
 *.d
 

@@ -63,7 +63,7 @@ int main(void) {
 	uart_print(&USB_UART,"\r\n[INFO] UART1 115200\r\n");
 	//start the listen loop
 //	TASK 2
-//	polling_receive();
+//	polling_ receive();
 //	TASK 3:
 	//initialize uart interrupt
 	interrupt_init();

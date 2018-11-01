@@ -32,4 +32,11 @@ void task3(){
 			:[out] "+w" (result)
 			:[in1] "w" (num1), [in2] "w" (num2), [in3] "w"  (five), [in4] "w"  (two_thirds),[in5] "w"  (carry));
 	printf("num1: %f , num2: %f, result: %f\r\n",num1,num2,result);
+
+	printf("Evaulating 2x + 5 two numbers but with VMULA\r\n");
+		asm volatile(	"vmov.f32 %[out], #5.0;\n\t" // x * 2/3
+						"vmla.f32 %[out], %[in1], %[in4];\n\t" // add 5 to carry and store in output
+				:[out] "+w" (result)
+				:[in1] "w" (num1), [in2] "w" (num2), [in3] "w"  (five), [in4] "w"  (two_thirds),[in5] "w"  (carry));
+		printf("num1: %f , num2: %f, result: %f\r\n",num1,num2,result);
 }

@@ -1,6 +1,7 @@
+
 void task3(){
 	float num1,num2,result;
-	num1 = 13.37;
+	num1 = 13.37; // numbers chosen by fair dice roll
 	num2 = 69.69;
 	result = 0.0;
 

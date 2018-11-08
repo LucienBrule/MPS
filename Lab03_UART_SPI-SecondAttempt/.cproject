@@ -64,9 +64,6 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1438870325.584069862" name="Lab03_uart2.c" rcbsApplicability="disable" resourcePath="src/Lab03_uart2.c" toolsToInvoke="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.332634465.1436079850">
-						<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.332634465.1436079850" name="MCU GCC Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.332634465"/>
-					</fileInfo>
 					<fileInfo id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1438870325.1378382010" name="stm32f769i_discovery.h" rcbsApplicability="disable" resourcePath="stm32lib/Drivers/BSP/STM32F769/stm32f769i_discovery.h" toolsToInvoke=""/>
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="inc"/>

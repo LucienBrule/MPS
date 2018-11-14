@@ -37,6 +37,7 @@ void configureADC()
 	__HAL_RCC_ADC1_CLK_ENABLE();
 	__HAL_RCC_GPIOA_CLK_ENABLE();
 
+
 	//Configure ADC1
 	ADCHandle.Instance = ADC1;
 	ADCHandle.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;

@@ -2,7 +2,6 @@
 
 int main(){
 	Sys_Init();
-	while(1){
-		printf("Hello world!\r\n");
-	}
+	__HAL_RCC_DMA2_CLK_ENABLE();
+	printf("THESE ARE WORDS");
 }

@@ -1,12 +1,13 @@
 #include "uart.h"
 
 // Initialize Hardware Resources
+void initDMA(void);
 
 // Peripheral's clock enable
 // Peripheral's GPIO Configuration
 
 DMA_HandleTypeDef tx, rx;
-int halfComplete, complete;
+int complete = 1;
 void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 	GPIO_InitTypeDef  GPIO_InitStruct;
 
@@ -61,10 +62,11 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 
 
 void initDMA(){
-	__DMA2_CLK_ENABLE();
+	//__DMA2_CLK_ENABLE();
+	__HAL_RCC_DMA2_CLK_ENABLE();
 
-	tx.Instance = DMA2_Stream6;
-	tx.Init.Channel = DMA_CHANNEL_5;
+	tx.Instance = DMA2_Stream7;
+	tx.Init.Channel = DMA_CHANNEL_4;
 	tx.Init.Direction = DMA_MEMORY_TO_PERIPH;
 	tx.Init.PeriphInc = DMA_PINC_DISABLE;
 	tx.Init.MemInc = DMA_MINC_ENABLE;
@@ -75,8 +77,8 @@ void initDMA(){
 	tx.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
 
 
-	rx.Instance = DMA2_Stream2;
-	rx.Init.Channel = DMA_CHANNEL_5;
+	rx.Instance = DMA2_Stream5;
+	rx.Init.Channel = DMA_CHANNEL_4;
 	rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
 	rx.Init.PeriphInc = DMA_PINC_DISABLE;
 	rx.Init.MemInc = DMA_MINC_ENABLE;
@@ -89,26 +91,35 @@ void initDMA(){
 	HAL_DMA_Init(&tx);
 	HAL_DMA_Init(&rx);
 
-	HAL_NVIC_SetPriority(DMA2_Stream6_IRQn, 0, 0);
-	HAL_NVIC_EnableIRQ(DMA2_Stream6_IRQn);
-	HAL_NVIC_SetPriority(DMA2_Stream2_IRQn, 0, 0);
-	HAL_NVIC_EnableIRQ(DMA2_Stream2_IRQn);
+	HAL_NVIC_SetPriority(DMA2_Stream5_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(DMA2_Stream5_IRQn);
+	HAL_NVIC_SetPriority(DMA2_Stream7_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(DMA2_Stream7_IRQn);
 
 
 
 
 }
 
-void DMA2_Stream6_IRQHandler(void)
+void DMA2_Stream7_IRQHandler(void)
 {
   HAL_DMA_IRQHandler(&tx);
+ // exit(0);
 }
-void DMA2_Stream2_IRQHandler(void)
+void DMA2_Stream5_IRQHadler(void)
 {
   HAL_DMA_IRQHandler(&rx);
 }
 
 
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	complete = 1;
+}
+
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart){
+
+}
 //UART Initialization
 void initUart(UART_HandleTypeDef* Uhand, uint32_t Baud, USART_TypeDef* Tgt) {
 	Uhand->Instance        = Tgt;
@@ -143,9 +154,20 @@ HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint3
 
 // Make printf(), putchar(), etc. default to work over USB UART
 int _write(int file, char *ptr, int len) {
-	HAL_DMA_Start(&tx,ptr,(uint32_t)&USB_UART.Instance->TDR, len);
+
+	//HAL_DMA_PollForTransfer(&tx, HAL_DMA_FULL_TRANSFER, HAL_MAX_DELAY);
+	//while(complete != 1);
+	USB_UART.Instance -> CR3 |= USART_CR3_DMAR;
 	HAL_DMA_PollForTransfer(&tx, HAL_DMA_FULL_TRANSFER, HAL_MAX_DELAY);
-	//HAL_UART_Transmit_DMA(&USB_UART,(uint8_t*) ptr, len);
+	USB_UART.Instance -> CR3 &= ~USART_CR3_DMAR;
+	HAL_DMA_Start(&tx,ptr,(uint32_t)&USB_UART.Instance->TDR, len);
+	HAL_UART_Transmit_DMA(&USB_UART,(uint8_t*) ptr, len);
+	HAL_Delay(1);
+
+
+	//complete = 0;
+
+	//HAL_Delay(100);
 	//HAL_UART_Transmit(&USB_UART, (uint8_t*) ptr, len, 1000);
 	return len;
 }
@@ -154,6 +176,11 @@ int _write(int file, char *ptr, int len) {
 int _read(int file, char *ptr, int len) {
 	*ptr = 0x00; // Clear the character buffer because scanf() is finicky
 	len = 1; // Again because of scanf's finickiness, len must = 1
+	USB_UART.Instance -> CR3 |= USART_CR3_DMAT;
+	HAL_DMA_PollForTransfer(&rx, HAL_DMA_FULL_TRANSFER, HAL_MAX_DELAY);
+	USB_UART.Instance -> CR3 &= ~USART_CR3_DMAT;
+	HAL_DMA_Start(&rx,ptr,(uint32_t)&USB_UART.Instance->TDR, len);
+	HAL_Delay(100);
 	HAL_UART_Receive_DMA(&USB_UART, (uint8_t*) ptr, len);
 	return len;
 }

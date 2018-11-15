@@ -108,7 +108,7 @@ HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint3
 int _write(int file, char *ptr, int len) {
 	/*HAL_DMA_Start(&tx,ptr,&USB_UART.Instance->TDR,len);
 	HAL_Delay(1000);*/
-	HAL_UART_Transmit(&USB_UART, (uint8_t*) ptr, len, 1000);
+	HAL_UART_Transmit_DMA(&USB_UART, (uint8_t*) ptr, len, 1000);
 	return len;
 }
 
@@ -116,7 +116,7 @@ int _write(int file, char *ptr, int len) {
 int _read(int file, char *ptr, int len) {
 	*ptr = 0x00; // Clear the character buffer because scanf() is finicky
 	len = 1; // Again because of scanf's finickiness, len must = 1
-	HAL_UART_Receive(&USB_UART, (uint8_t*) ptr, len, HAL_MAX_DELAY);
+	HAL_UART_Receive_DMA(&USB_UART, (uint8_t*) ptr, len, HAL_MAX_DELAY);
 	return len;
 }
 

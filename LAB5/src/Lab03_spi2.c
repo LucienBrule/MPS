@@ -16,7 +16,7 @@
 
 SPI_HandleTypeDef spi2;
 uint32_t bufferKbd, bufferSpi;
-
+DMA_HandleTypeDef tx, rx;
 void task3(){
 	uint8_t i[1], o[1], index;
 
@@ -68,6 +68,44 @@ void configureSPI()
 	spi2.Init.CRCPolynomial = 10;
 
 
+	__DMA1_CLK_ENABLE();
+
+	tx.Instance = DMA1_Stream2;
+	tx.Init.Channel = DMA_CHANNEL_9;
+	tx.Init.Direction = DMA_MEMORY_TO_PERIPH;
+	tx.Init.PeriphInc = DMA_PINC_DISABLE;
+	tx.Init.MemInc = DMA_MINC_ENABLE;
+	tx.Init.PeriphDataAlignment = DMA_MDATAALIGN_BYTE;
+	tx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+	tx.Init.Mode = DMA_NORMAL;
+	tx.Init.Priority = DMA_PRIORITY_LOW;
+	tx.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+
+
+	rx.Instance = DMA1_Stream1;
+	rx.Init.Channel = DMA_CHANNEL_9;
+	rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
+	rx.Init.PeriphInc = DMA_PINC_DISABLE;
+	rx.Init.MemInc = DMA_MINC_ENABLE;
+	rx.Init.PeriphDataAlignment = DMA_MDATAALIGN_BYTE;
+	rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+	rx.Init.Mode = DMA_NORMAL;
+	rx.Init.Priority = DMA_PRIORITY_LOW;
+	rx.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+
+	HAL_DMA_Init(&tx);
+	HAL_DMA_Init(&rx);
+
+	HAL_NVIC_SetPriority(DMA2_Stream1_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(DMA2_Stream1_IRQn);
+	HAL_NVIC_SetPriority(DMA2_Stream2_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(DMA2_Stream2_IRQn);
+
+
+
+
+
+
 
 
 
@@ -83,6 +121,16 @@ void configureSPI()
 	// the passed SPI_HandleTypeDef. After finishing the MspInit call, it will set
 	// the SPI property bits. This is how all HAL_[peripheral]_Init() functions work.
 }
+
+void DMA2_Stream1_IRQHandler(void)
+{
+  HAL_DMA_IRQHandler(&rx);
+}
+void DMA2_Stream2_IRQHandler(void)
+{
+  HAL_DMA_IRQHandler(&tx);
+}
+
 
 /*
  * This is called upon SPI initialization. It handles the configuration
@@ -128,6 +176,7 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef *hspi)
 	}
 }
 
+/*
 int main(void)
 {
 	Sys_Init();
@@ -154,3 +203,4 @@ int main(void)
 //	HAL_StatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size, uint32_t Timeout)
 //
 }
+*/

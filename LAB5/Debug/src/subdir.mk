@@ -4,16 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/Lab03_spi2.c \
 ../src/init.c \
 ../src/main.c \
 ../src/uart.c 
 
 OBJS += \
+./src/Lab03_spi2.o \
 ./src/init.o \
 ./src/main.o \
 ./src/uart.o 
 
 C_DEPS += \
+./src/Lab03_spi2.d \
 ./src/init.d \
 ./src/main.d \
 ./src/uart.d 

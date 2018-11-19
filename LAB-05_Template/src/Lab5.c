@@ -5,7 +5,7 @@ DMA_HandleTypeDef txSPI, rxSPI;
 SPI_HandleTypeDef spi2;
 int done = 0;
 uint32_t task4_part2(float*,float );
-void task3();
+void fuckingrunme();
 void task2();
 void initDMA();
 void configureDAC();
@@ -14,12 +14,12 @@ ADC_HandleTypeDef ADCHandle;
 DAC_HandleTypeDef DACHandle;
 int main(){
 	Sys_Init();
-	initDMA();
+	initSPIDMA();
 	configureSPI();
 	configureADC();
 	configureDAC();
 	printf("Enter something\r\n");
-	task3();
+	task2();
 	//HAL_Delay(1000);
 	/*while(1){
 		char a = getchar();
@@ -53,7 +53,18 @@ void task1(){
 }
 
 
-
+void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
+	done = 1;
+}
+void DMA1_Stream4_IRQHandler(){
+	HAL_DMA_IRQHandler(&txSPI);
+}
+void DMA1_Stream3_IRQHandler(){
+	HAL_DMA_IRQHandler(&rxSPI);
+}
+void SPI2_IRQHandler(){
+	HAL_SPI_IRQHandler(&spi2);
+}
 void task2(){
 	uint8_t i[1], o[1], index;
 
@@ -63,10 +74,10 @@ void task2(){
 		o[0] = 0x00;
 
 		o[0] = getchar();
-		printf("Got something\r\n");
-		HAL_SPI_TransmitReceive_DMA(&spi2, o,i,1);
+		printf("Got something: %c\r\n",o[0]);
+		HAL_SPI_TransmitReceive_DMA(&spi2, o,i,(uint16_t) 1);
 		while(!done);
-
+		printf("\r\nDone.");
 		printf("\033[2J");
 //		printf("\033[1;0Kbd %c\r\n\nSPI%c", o[0],i[0]);
 		printf("KBD: %c \r\n",o[0]);
@@ -74,19 +85,13 @@ void task2(){
 		printf("SPI: %c \r\n",i[0]);
 		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
-
-
-
-
-
-
 		index++;
 	}
 
 }
 
 
-void task3(){
+void fuckingrunme(){
 		float adc_buffer[3] = {0.0};
 		float previous = 0.0;
 		float new_value = 0.0;
@@ -100,6 +105,7 @@ void task3(){
 	//		part 4 implemented with assembly and C
 	//		new_value = (float) task4(&adc_buffer, previous);
 			new_value = (float) task4_part2(adc_buffer, previous);
+			printf("[INFO] NEW VALUE: %f\r\n",new_value);
 	//Dac write
 			HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
 			HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R,(uint32_t) new_value);
@@ -129,8 +135,7 @@ void configureSPI()
 	spi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
 	spi2.Init.CRCPolynomial = 10;
 
-	__HAL_LINKDMA(&spi2,hdmatx,txSPI);
-	__HAL_LINKDMA(&spi2,hdmarx,rxSPI);
+
 
 
 
@@ -139,6 +144,8 @@ void configureSPI()
 	if(HAL_SPI_Init(&spi2) != HAL_OK){
 		printf("Error\r\n");
 	}
+	__HAL_LINKDMA(&spi2,hdmatx,txSPI);
+	__HAL_LINKDMA(&spi2,hdmarx,rxSPI);
 
 	//
 	// Note: HAL_StatusTypeDef HAL_SPI_Init(SPI_HandleTypeDef *hspi)
@@ -301,15 +308,6 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef *hadc)
 
 }
 
-void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
-	printf("Callback");
-	done = 1;
-}
 
-void DMA1_Stream4_IRQHandler(){
-	HAL_DMA_IRQHandler(&txSPI);
-}
-void DMA1_Stream3_IRQHandler(){
-	HAL_DMA_IRQHandler(&rxSPI);
-}
+
 

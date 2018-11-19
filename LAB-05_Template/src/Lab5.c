@@ -9,10 +9,14 @@ void task3();
 void task2();
 void initDMA();
 void configureSPI();
+ADC_HandleTypeDef ADCHandle;
+DAC_HandleTypeDef DACHandle;
 int main(){
 	Sys_Init();
 	initDMA();
 	configureSPI();
+	configureADC();
+	configureDAC();
 	printf("Enter something\r\n");
 	task3();
 	//HAL_Delay(1000);
@@ -78,6 +82,28 @@ void task2(){
 		index++;
 	}
 
+}
+
+
+void task3(){
+		float adc_buffer[3] = {0.0};
+		float previous = 0.0;
+		float new_value = 0.0;
+		while(1){
+			for(int i = 0; i < 3; i++){
+				//adc read
+				HAL_ADC_Start(&ADCHandle);
+				HAL_ADC_PollForConversion(&ADCHandle,100);
+				adc_buffer[i] = HAL_ADC_GetValue(&ADCHandle);
+			}
+	//		part 4 implemented with assembly and C
+	//		new_value = (float) task4(&adc_buffer, previous);
+			new_value = (float) task4_part2(&adc_buffer, previous);
+	//Dac write
+			HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
+			HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R,(uint32_t) new_value);
+			previous = new_value;
+		}
 }
 
 
@@ -199,6 +225,79 @@ void initSPIDMA(){
 		HAL_NVIC_EnableIRQ(DMA1_Stream4_IRQn);
 		HAL_NVIC_SetPriority(DMA1_Stream3_IRQn, 0, 0);
 		HAL_NVIC_EnableIRQ(DMA1_Stream3_IRQn);
+}
+
+
+void configureADC()
+{
+	// Enable the ADC Clock.
+	__HAL_RCC_SYSCFG_CLK_ENABLE();
+	__HAL_RCC_ADC1_CLK_ENABLE();
+	__HAL_RCC_GPIOA_CLK_ENABLE();
+
+
+	//Configure ADC1
+	ADCHandle.Instance = ADC1;
+	ADCHandle.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+	ADCHandle.Init.Resolution = ADC_RESOLUTION12b;
+	ADCHandle.Init.ContinuousConvMode = DISABLE;
+	ADCHandle.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+	ADCHandle.Init.NbrOfConversion = 0;
+	ADCHandle.Init.NbrOfDiscConversion = 1;
+	ADCHandle.Init.DiscontinuousConvMode = ENABLE;
+	ADCHandle.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+	HAL_ADC_Init(&ADCHandle); // Initialize the ADC
+
+
+	// Configure the ADC channel
+	ADC_ChannelConfTypeDef ADC_Channel_InitStruct;
+	ADC_Channel_InitStruct.Channel = ADC_CHANNEL_6;
+	ADC_Channel_InitStruct.Rank = 1;
+	ADC_Channel_InitStruct.SamplingTime = ADC_SAMPLETIME_112CYCLES;
+	HAL_ADC_ConfigChannel(&ADCHandle,&ADC_Channel_InitStruct);
+}
+
+uint32_t task4_part2(float* k,float previous_output){
+	float adc1 = k[0];
+	float adc2 = k[1];
+	float adc3 = k[2];
+	float adc4 = previous_output;
+	float dac_out = 0.0;
+	float scalar = 0.0;
+//	SO the compiler CANT PASS FLOATS so pass as uint32_t instead.
+//	this is important ^^^^^^^^^^^^^^
+	return (uint32_t)( adc1 * 0.3125 + adc2 * 0.25 + adc3 * 0.3125 + adc4 * 0.296875);
+}
+
+void configureDAC(){
+	// GPIO init for A6
+	GPIO_InitTypeDef GPIO_InitStruct_a4;
+	GPIO_InitStruct_a4.Pin = GPIO_PIN_4;
+	GPIO_InitStruct_a4.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct_a4.Pull = GPIO_NOPULL;
+	GPIO_InitStruct_a4.Speed = GPIO_SPEED_HIGH;
+	HAL_GPIO_Init(GPIOA,&GPIO_InitStruct_a4);
+	__HAL_RCC_DAC_CLK_ENABLE();
+	DACHandle.Instance = DAC1;
+	HAL_DAC_Init(&DACHandle);
+	DAC_ChannelConfTypeDef DAC_Channel_InitStruct;
+	DAC_Channel_InitStruct.DAC_Trigger = DAC_TRIGGER_NONE;
+	HAL_DAC_ConfigChannel(&DACHandle,&DAC_Channel_InitStruct,DAC1_CHANNEL_1);
+}
+
+
+void HAL_ADC_MspInit(ADC_HandleTypeDef *hadc)
+{
+
+// GPIO init
+	GPIO_InitTypeDef GPIO_InitStruct;
+	GPIO_InitStruct.Pin = GPIO_PIN_6;
+	GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+	HAL_GPIO_Init(GPIOA,&GPIO_InitStruct);
+
+
 }
 
 void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){

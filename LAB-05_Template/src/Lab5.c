@@ -4,10 +4,11 @@
 DMA_HandleTypeDef txSPI, rxSPI;
 SPI_HandleTypeDef spi2;
 int done = 0;
-
+uint32_t task4_part2(float*,float );
 void task3();
 void task2();
 void initDMA();
+void configureDAC();
 void configureSPI();
 ADC_HandleTypeDef ADCHandle;
 DAC_HandleTypeDef DACHandle;
@@ -98,7 +99,7 @@ void task3(){
 			}
 	//		part 4 implemented with assembly and C
 	//		new_value = (float) task4(&adc_buffer, previous);
-			new_value = (float) task4_part2(&adc_buffer, previous);
+			new_value = (float) task4_part2(adc_buffer, previous);
 	//Dac write
 			HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
 			HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R,(uint32_t) new_value);

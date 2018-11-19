@@ -106,14 +106,17 @@ void DMA2_Stream7_IRQHandler(void)
   HAL_DMA_IRQHandler(&tx);
  // exit(0);
 }
-void DMA2_Stream5_IRQHadler(void)
+void DMA2_Stream5_IRQHandler(void)
 {
   HAL_DMA_IRQHandler(&rx);
 }
 
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	//printf("Received\r\n");
+	//printf("Done receive\r\n");
 	complete = 1;
+
 }
 
 
@@ -162,7 +165,7 @@ int _write(int file, char *ptr, int len) {
 	USB_UART.Instance -> CR3 &= ~USART_CR3_DMAR;
 	HAL_DMA_Start(&tx,ptr,(uint32_t)&USB_UART.Instance->TDR, len);
 	HAL_UART_Transmit_DMA(&USB_UART,(uint8_t*) ptr, len);
-	HAL_Delay(1);
+	HAL_Delay(10);
 
 
 	//complete = 0;
@@ -174,14 +177,17 @@ int _write(int file, char *ptr, int len) {
 
 // Make scanf(), getchar(), etc. default to work over USB UART
 int _read(int file, char *ptr, int len) {
+	complete = 0;
 	*ptr = 0x00; // Clear the character buffer because scanf() is finicky
 	len = 1; // Again because of scanf's finickiness, len must = 1
-	USB_UART.Instance -> CR3 |= USART_CR3_DMAT;
-	HAL_DMA_PollForTransfer(&rx, HAL_DMA_FULL_TRANSFER, HAL_MAX_DELAY);
-	USB_UART.Instance -> CR3 &= ~USART_CR3_DMAT;
-	HAL_DMA_Start(&rx,ptr,(uint32_t)&USB_UART.Instance->TDR, len);
-	HAL_Delay(100);
+	//USB_UART.Instance -> CR3 |= USART_CR3_DMAT;
+	//HAL_DMA_PollForTransfer(&rx, HAL_DMA_FULL_TRANSFER, HAL_MAX_DELAY);
+	//USB_UART.Instance -> CR3 &= ~USART_CR3_DMAT;
+	//HAL_DMA_Start(&rx,ptr,(uint32_t)&USB_UART.Instance->TDR, len);
+	//HAL_Delay(100);
 	HAL_UART_Receive_DMA(&USB_UART, (uint8_t*) ptr, len);
+	while(complete != 1);
+	HAL_Delay(10);
 	return len;
 }
 

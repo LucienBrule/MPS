@@ -13,18 +13,21 @@ void configureDAC();
 void configureSPI();
 void initADCDMA();
 void configureADC();
+uint8_t i[1],o[1];
 ADC_HandleTypeDef ADCHandle;
 DAC_HandleTypeDef DACHandle;
-
+//must be global
 float adc_buffer[3] = {0.0};
-		float temp_buffer[1] = {0.0};
 int main(){
 	Sys_Init();
-	initSPIDMA();
-	initADCDMA();
 	configureSPI();
-	configureADC();
-	configureDAC();
+	initSPIDMA();
+
+	__HAL_LINKDMA(&spi2,hdmatx,txSPI);
+	__HAL_LINKDMA(&spi2,hdmarx,rxSPI);
+//	enable for tasks 2 and 3
+//	configureADC();
+//	configureDAC();
 	printf("Enter something\r\n");
 	task3();
 	//HAL_Delay(1000);
@@ -73,7 +76,7 @@ void SPI2_IRQHandler(){
 	HAL_SPI_IRQHandler(&spi2);
 }
 void task2(){
-	uint8_t i[1], o[1], index;
+	uint8_t index;
 
 	index = 0;
 	while(1){
@@ -83,13 +86,16 @@ void task2(){
 		o[0] = getchar();
 		printf("Got something: %c\r\n",o[0]);
 		HAL_SPI_TransmitReceive_DMA(&spi2, o,i,(uint16_t) 1);
+//		HAL_SPI_TransmitReceive(&spi2, o,i,(uint16_t) 1,1000);
+
 		while(!done);
+		done = 0;
 		printf("\r\nDone.");
 		printf("\033[2J");
 //		printf("\033[1;0Kbd %c\r\n\nSPI%c", o[0],i[0]);
-		printf("KBD: %c \r\n",o[0]);
+		printf("KBD: %c %x \r\n",o[0],o[0]);
 		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-		printf("SPI: %c \r\n",i[0]);
+		printf("SPI: %c %x\r\n",i[0],i[0]);
 		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 		index++;
@@ -138,15 +144,16 @@ void configureSPI()
 	spi2.Instance = SPI2;
 	spi2.Init.Mode = SPI_MODE_MASTER;
 	spi2.Init.TIMode = SPI_TIMODE_DISABLE;
-	spi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_128;
+	spi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;
 	spi2.Init.DataSize = SPI_DATASIZE_8BIT;
 	spi2.Init.Direction = SPI_DIRECTION_2LINES;
-	spi2.Init.CLKPolarity = SPI_POLARITY_LOW;
+	spi2.Init.CLKPolarity = SPI_POLARITY_HIGH;
 	spi2.Init.CLKPhase = SPI_PHASE_1EDGE;
-	spi2.Init.NSS = SPI_NSS_SOFT;
+	spi2.Init.NSS = SPI_NSS_HARD_OUTPUT;
+	spi2.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
 	spi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
-	spi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-	spi2.Init.CRCPolynomial = 10;
+	//spi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+	//spi2.Init.CRCPolynomial = 10;
 
 
 
@@ -157,8 +164,7 @@ void configureSPI()
 	if(HAL_SPI_Init(&spi2) != HAL_OK){
 		printf("Error\r\n");
 	}
-	__HAL_LINKDMA(&spi2,hdmatx,txSPI);
-	__HAL_LINKDMA(&spi2,hdmarx,rxSPI);
+
 
 	//
 	// Note: HAL_StatusTypeDef HAL_SPI_Init(SPI_HandleTypeDef *hspi)
@@ -213,7 +219,7 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef *hspi)
 void initSPIDMA(){
 	//__DMA2_CLK_ENABLE();
 		__HAL_RCC_DMA1_CLK_ENABLE();
-
+//configure SPI send and receive
 		txSPI.Instance = DMA1_Stream4;
 		txSPI.Init.Channel = DMA_CHANNEL_0;
 		txSPI.Init.Direction = DMA_MEMORY_TO_PERIPH;
@@ -236,10 +242,10 @@ void initSPIDMA(){
 		rxSPI.Init.Mode = DMA_NORMAL;
 		rxSPI.Init.Priority = DMA_PRIORITY_VERY_HIGH;
 		rxSPI.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
-
+//enable dma with spi
 		HAL_DMA_Init(&txSPI);
 		HAL_DMA_Init(&rxSPI);
-
+//link irq handlers
 		HAL_NVIC_EnableIRQ(SPI2_IRQn);
 		HAL_NVIC_SetPriority(SPI2_IRQn,0,0);
 		HAL_NVIC_SetPriority(DMA1_Stream4_IRQn, 0, 0);
@@ -305,17 +311,16 @@ void configureADC()
 
 }
 
-
+//task 4 irq handler
 void ADC_IRQHandler(){
-	printf("interrupt");
 	HAL_ADC_IRQHandler(&adc);
 }
-
+//task4 callback
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *a){
 	adcDone = 1;
 
 }
-
+//implement iir filter algorithm
 uint32_t task4_part2(float* k,float previous_output){
 	float adc1 = k[0];
 	float adc2 = k[1];

@@ -1,25 +1,32 @@
 #include "init.h"
 #define TEXT_ESCAPE "\033[0;33m\033[44m\n"
 
-DMA_HandleTypeDef txSPI, rxSPI;
+DMA_HandleTypeDef txSPI, rxSPI, adc;
 SPI_HandleTypeDef spi2;
 int done = 0;
+int adcDone = 0;
 uint32_t task4_part2(float*,float );
-void fuckingrunme();
+void task3();
 void task2();
-void initDMA();
+void initSPIDMA();
 void configureDAC();
 void configureSPI();
+void initADCDMA();
+void configureADC();
 ADC_HandleTypeDef ADCHandle;
 DAC_HandleTypeDef DACHandle;
+
+float adc_buffer[3] = {0.0};
+		float temp_buffer[1] = {0.0};
 int main(){
 	Sys_Init();
 	initSPIDMA();
+	initADCDMA();
 	configureSPI();
 	configureADC();
 	configureDAC();
 	printf("Enter something\r\n");
-	task2();
+	task3();
 	//HAL_Delay(1000);
 	/*while(1){
 		char a = getchar();
@@ -91,16 +98,22 @@ void task2(){
 }
 
 
-void fuckingrunme(){
-		float adc_buffer[3] = {0.0};
+void task3(){
+
 		float previous = 0.0;
 		float new_value = 0.0;
 		while(1){
 			for(int i = 0; i < 3; i++){
 				//adc read
-				HAL_ADC_Start(&ADCHandle);
-				HAL_ADC_PollForConversion(&ADCHandle,100);
-				adc_buffer[i] = HAL_ADC_GetValue(&ADCHandle);
+				printf("before\r\n");
+				HAL_ADC_Start_DMA(&ADCHandle,(uint32_t *)temp_buffer,1);
+
+
+				//HAL_ADC_PollForConversion(&ADCHandle,100);
+				while(!adcDone);
+				printf("after\r\n");
+				adcDone = 0;
+				adc_buffer[i] = temp_buffer[0];
 			}
 	//		part 4 implemented with assembly and C
 	//		new_value = (float) task4(&adc_buffer, previous);
@@ -236,6 +249,25 @@ void initSPIDMA(){
 }
 
 
+void initADCDMA(){
+	__HAL_RCC_DMA2_CLK_ENABLE();
+
+	adc.Instance = DMA2_Stream0;
+	adc.Init.Channel = DMA_CHANNEL_0;
+	adc.Init.Direction = DMA_PERIPH_TO_MEMORY;
+	adc.Init.PeriphInc = DMA_PINC_DISABLE;
+	adc.Init.MemInc = DMA_MINC_ENABLE;
+	adc.Init.PeriphDataAlignment = DMA_MDATAALIGN_BYTE;
+	adc.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+	adc.Init.Mode = DMA_CIRCULAR;
+	adc.Init.Priority = DMA_PRIORITY_VERY_HIGH;
+	adc.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+
+	HAL_DMA_Init(&adc);
+
+
+}
+
 void configureADC()
 {
 	// Enable the ADC Clock.
@@ -263,6 +295,25 @@ void configureADC()
 	ADC_Channel_InitStruct.Rank = 1;
 	ADC_Channel_InitStruct.SamplingTime = ADC_SAMPLETIME_112CYCLES;
 	HAL_ADC_ConfigChannel(&ADCHandle,&ADC_Channel_InitStruct);
+
+	__HAL_LINKDMA(&ADCHandle,DMA_Handle,adc);
+	HAL_NVIC_EnableIRQ(ADC_IRQn);
+	HAL_NVIC_SetPriority(ADC_IRQn,0,0);
+	HAL_NVIC_SetPriority(DMA2_Stream0_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);
+
+
+}
+
+
+void ADC_IRQHandler(){
+	printf("interrupt");
+	HAL_ADC_IRQHandler(&adc);
+}
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *a){
+	adcDone = 1;
+
 }
 
 uint32_t task4_part2(float* k,float previous_output){

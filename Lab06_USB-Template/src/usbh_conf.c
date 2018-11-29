@@ -49,9 +49,11 @@
 #include "stm32f7xx_hal.h"
 
 #include "usbh_core.h"
-
+extern uint8_t isMouseConnected;
 HCD_HandleTypeDef hhcd;
-
+void OTG_HS_IRQHandler(void){
+	HAL_HCD_IRQHandler(&hhcd);
+}
 /*******************************************************************************
                        HCD BSP Routines
 *******************************************************************************/
@@ -169,7 +171,10 @@ void HAL_HCD_SOF_Callback(HCD_HandleTypeDef *hhcd)
   */
 void HAL_HCD_Connect_Callback(HCD_HandleTypeDef *hhcd)
 {
-  USBH_LL_Connect(hhcd->pData);
+//	printf("Connected\r\n");
+	USBH_LL_Connect(hhcd->pData);
+	isMouseConnected = 1;
+
 }
 
 /**
@@ -179,7 +184,9 @@ void HAL_HCD_Connect_Callback(HCD_HandleTypeDef *hhcd)
   */
 void HAL_HCD_Disconnect_Callback(HCD_HandleTypeDef *hhcd)
 {
-  USBH_LL_Disconnect(hhcd->pData);
+//	printf("Disconnected\r\n");
+	isMouseConnected = 0;
+	USBH_LL_Disconnect(hhcd->pData);
 } 
 
 

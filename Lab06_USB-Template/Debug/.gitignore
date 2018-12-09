@@ -1,0 +1,10 @@
+/USBH_Drivers/
+/sources.mk
+/src/
+/startup/
+/stm32lib/
+/makefile
+/objects.list
+/objects.mk
+/Middlewares/
+/inc/

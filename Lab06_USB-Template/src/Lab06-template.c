@@ -5,54 +5,67 @@
 //
 
 #include "init.h"
-#include "usbh_conf.h"
-#include "usbh_hid.h"
-#include "usbh_core.h"
-#include "ff_gen_drv.h"
-#include "usbh_diskio.h"
+#include "usb_device.h"
+#include "usbd_conf.h"
+#include "usbd_hid.h"
+#include "usbd_desc.h"
+#include "init.h"
 
-USBH_HandleTypeDef husbh;
-void USBH_UserProcess(USBH_HandleTypeDef *, uint8_t);
-uint8_t isMouseConnected = 0;
-uint8_t isMouseActive = 0;
-char data_ready = 0;
 
-HID_MOUSE_Info_TypeDef* mouse_info;
+
+
+
+
+//#include "usbd_desc.c"
+
+
+
+
+
+USBD_HandleTypeDef USBDevice;
+//PCD_HandleTypeDef hpcd_USB_OTG_HS;
+uint8_t buff[4] = {1,0,0,0};
+
+
+
 int main(void) {
-	// System Initializations
-	// Application Initializations
-
 	Sys_Init();
-	HAL_Init();
-	// USBH Driver Initialization
-	USBH_Init(&husbh, &USBH_UserProcess, 0);
 
-	// USB Driver Class Registrations: Add device types to handle.
-	USBH_RegisterClass(&husbh, USBH_HID_CLASS);
-	USBH_RegisterClass(&husbh, USBH_MSC_CLASS);
-	// Start USBH Driver
-	USBH_Start(&husbh);
+	HAL_NVIC_SetPriority(OTG_HS_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(OTG_HS_IRQn);
+	printf("Started\r\n");
+	//USBD_RegisterClass(&USBDevice,&USBD_HID);
+	USBD_Init(&USBDevice,&HS_Desc, 1);
+	printf("Check1\r\n");
+	USBD_RegisterClass(&USBDevice,&USBD_HID);
+	printf("Check2\r\n");
+	USBD_Start(&USBDevice);
+	printf("Working\n");
+	USBD_HID_SendReport(&USBDevice,buff,4);
 
-	printf("Press any key to start\r\n");
-	char wait = 0;
-//	wait = getchar();
-	printf("HOST ID: %x\r\n", husbh.id);
-	while (1) {
-		USBH_Process(&husbh);
-		//printf("Is Mouse Active: %x\r", isMouseActive);
-		if(data_ready && isMouseActive){
-			printf("here");fflush(stdout);
-			//mouse_info = USBH_HID_GetMouseInfo(&husbh);
-		}
-	}
+	while(1)
+
+		asm("nop");
 }
 
-void USBH_UserProcess(USBH_HandleTypeDef *phost, uint8_t id) {
-	if (id == HOST_USER_CLASS_ACTIVE)
-			isMouseActive = 1;
+
+void OTG_HS_IRQHandler(void)
+{
+  /* USER CODE BEGIN OTG_HS_IRQn 0 */
+
+  /* USER CODE END OTG_HS_IRQn 0 */
+  HAL_PCD_IRQHandler(&hpcd_USB_OTG_HS);
+  /* USER CODE BEGIN OTG_HS_IRQn 1 */
+
+  /* USER CODE END OTG_HS_IRQn 1 */
 }
+
+
+
+
+
+
+
+
 
 // Interrupts and Callbacks...
-void USBH_HID_EventCallback(USBH_HandleTypeDef *phost){
-	data_ready = 1;
-}

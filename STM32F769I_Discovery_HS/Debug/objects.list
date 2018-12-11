@@ -1,6 +1,7 @@
 "Application/SW4STM32/startup_stm32f769xx.o"
 "Application/User/main.o"
 "Application/User/stm32f7xx_it.o"
+"Application/User/system_stm32f7xx.o"
 "Application/User/usbd_conf.o"
 "Application/User/usbd_desc.o"
 "Application/User/usbd_storage.o"

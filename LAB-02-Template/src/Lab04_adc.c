@@ -1,10 +1,16 @@
 //--------------------------------
 // Lab 4 - Sample - Lab04_sample.c
+
 //--------------------------------
 //
 //
 #include <stdlib.h>
+#include <math.h>
 #include "init.h"
+//#include "stm32f7xx_hal_adc.h"
+//#include "stm32f7xx_hal_dac.h"
+//#include "stm32f7xx_hal_adc.c";
+//#include "stm32f7xx_hal_dac.c";
 void configureADC();
 void task1();
 void task2();
@@ -26,13 +32,15 @@ int main(void)
 	configureDAC();
 	HAL_ADC_Start(&ADCHandle);
 	printf("\r\n============ Starting LAB 04 ===============\r\n");
-
-	finalProject();
+//	triangleWave(1000, 0);
+	squareWave(2000,2000);
+//	generateSine(1000,0);
+//	finalProject();
 //	task1();
-//	task2();
+//	task2(15,1,1500);
 //	task2_part2();
 //	task4();
-	task3();
+//	task3();
 //	task4();
 	float adc_buffer[3] = {0.0};
 	float previous = 0.0;
@@ -80,7 +88,7 @@ void TIM7_IRQHandler(void) {
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef * tim){
 	if(tim -> Instance == TIM7){
-		//printf("Overflow\r\n");
+		printf("Overflow\r\n");
 		overflows++;
 	}
 
@@ -92,9 +100,14 @@ void task3(){
 	overflows = 0;
 	HAL_TIM_Base_Start_IT(&tim7);
 	printf("Waiting for input...\r\n");
-	for(int i = 0; i< 1000; i++){
-
-	}
+	while(overflows < 5);
+//	for(int i = 0; i< 1000; i++){
+//		printf("1");
+//		asm("nop");
+//		asm("nop");
+//		asm("nop");
+//		asm("nop");
+//	}
 	HAL_TIM_Base_Stop_IT(&tim7);
 	float elapsed = overflows * .028;
 	printf("%.1f seconds elapsed\r\n", elapsed);
@@ -124,7 +137,9 @@ void finalProject(){
 
 	}
 
+	frequency *= 250;
 	printf("Frequency: %f\r\n",frequency);
+
 
 	while(1){
 			printf("Enter an offset (kHz) \r\n");
@@ -138,28 +153,129 @@ void finalProject(){
 
 
 
+	task2((uint32_t)frequency,amplitude,dcOffset);
 
 
 
+}
 
+void generateSine(uint16_t a, uint16_t o){
+	printf("Generate Sine\r\n");
+	double count = 0;
+	double result = 0;
+	int out = 0;
+	HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
+
+	while(1){
+		result = a * sin(count/360.0);
+
+		result += (a+o);
+//		printf("%f\r\n", result);
+		HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, (uint32_t)result);
+		for(int i = 0; i < 500; i++);
+//		HAL_Delay(1);
+		count++;
+	}
 }
 
 void timeTest(){
 
+
+
 }
 
-void task2(){
+void task2(uint32_t f, uint32_t a, uint32_t o){
 	uint32_t output = 0;
-	for(;;){
-		if(output >= 4095) output = 0;
-		output+=0x0F;
-		HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
-		HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R,output);
-		printf("Output: %lu\r\n", output);
-//		HAL_Delay(1000);
-//		HAL_DACEx_TriangleWaveGenerate(&DACHandle,DAC1_CHANNEL_1,1);
+	uint32_t freq = 100000/15 * f;
+	uint32_t wave = 0;
+	uint32_t amplitude = (4000*a) / 3.3;
+	uint8_t shouldWriteHigh = 1;
 
- }
+	double delay = ((-6.0*(double)f)/5.0) + 136;
+	HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
+	printf("Freq: %f\r\n", delay);
+	printf("Freq/2 %u\r\n", freq/2);
+
+	for(;;){
+
+		if(output > amplitude) output = 0;
+		HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, (output + o));
+		for(int i = 0; i < (int)delay*50; i++);
+		//HAL_Delay(1);
+		output+=0x0F;
+
+}
+
+
+//		if(output >= freq) output = 0;
+//		if(output > freq/2) shouldWriteHigh = 1;
+//		else shouldWriteHigh = 0;
+//		output+=0x0F;
+//
+////		if(output > 2048) wave = 4096;
+////		else wave = 0;
+////		HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
+////		HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, output);
+//////		//high period
+//		if(shouldWriteHigh){
+//			HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, amplitude);
+//		}
+//		else{
+//			HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, 0);
+//
+//		}
+////		HAL_Delay(100);
+//		shouldWriteHigh = !shouldWriteHigh;
+////		printf("Output: %lu\r\n", shouldWriteHigh);
+////		HAL_Delay(1000);
+////		HAL_DACEx_TriangleWaveGenerate(&DACHandle,DAC1_CHANNEL_1,1);
+//	}
+
+}
+
+void squareWave(uint16_t a, uint16_t o){
+
+	HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
+	while(1){
+		for(int i = 0; i < 10000000; i++){
+				if(i < 5000000) 		HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, a+o);
+				else 		HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, o);
+
+
+			}
+	}
+
+
+}
+
+void triangleWave(uint16_t a, uint16_t o){
+
+	HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
+	uint32_t output = 2000;
+	uint8_t section = 0;
+	while(1){
+		//printf("Section %u\r\n" , section);
+		//printf("Output %u\r\n" , output);
+		if(section == 0){
+			if(output == (2000 + a)) section = 1;
+			else output ++;
+			HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, (output + o));
+		}
+		if(section == 1){
+			if(output == (2000 - a)) section = 2;
+			else output--;
+			HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, (output + o));
+		}
+		if(section == 2){
+			if(output == 2000) section = 0;
+			else output++;
+			HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R, (output + o));
+		}
+
+		for(int i=0; i < 5000; i++);
+	}
+
+
 }
 void task2_part2(){
 	int32_t output = 0;
@@ -253,3 +369,6 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef *hadc)
 
 
 }
+void HAL_TIMEx_BreakCallback(TIM_HandleTypeDef *htim){};
+void HAL_TIMEx_CommutationCallback(TIM_HandleTypeDef *htim){};
+

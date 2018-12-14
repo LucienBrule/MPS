@@ -40,6 +40,7 @@
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __STM32F7xx_HAL_CONF_H
 #define __STM32F7xx_HAL_CONF_H
+#include "stm32f7xx_hal_tim.h"
 
 #ifdef __cplusplus
  extern "C" {

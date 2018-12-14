@@ -53,12 +53,12 @@
   * @brief This is the list of modules to be used in the HAL driver
   */
 #define HAL_MODULE_ENABLED
-// #define HAL_ADC_MODULE_ENABLED
+ #define HAL_ADC_MODULE_ENABLED
 // #define HAL_CAN_MODULE_ENABLED
 // #define HAL_CEC_MODULE_ENABLED
 // #define HAL_CRC_MODULE_ENABLED
 // #define HAL_CRYP_MODULE_ENABLED
-// #define HAL_DAC_MODULE_ENABLED
+ #define HAL_DAC_MODULE_ENABLED
 // #define HAL_DCMI_MODULE_ENABLED
 #define HAL_DMA_MODULE_ENABLED
 // #define HAL_DMA2D_MODULE_ENABLED
@@ -252,6 +252,8 @@
   * @brief Include module's header file
   */
 
+
+
 #ifdef HAL_RCC_MODULE_ENABLED
   #include "stm32f7xx_hal_rcc.h"
 #endif /* HAL_RCC_MODULE_ENABLED */
@@ -267,6 +269,9 @@
 #ifdef HAL_CORTEX_MODULE_ENABLED
   #include "stm32f7xx_hal_cortex.h"
 #endif /* HAL_CORTEX_MODULE_ENABLED */
+
+//#include "stm32f7xx_hal_adc.h";
+//#include "stm32f7xx_hal_dac.h";
 
 #ifdef HAL_ADC_MODULE_ENABLED
   #include "stm32f7xx_hal_adc.h"

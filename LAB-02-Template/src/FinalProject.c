@@ -17,6 +17,7 @@ void task2();
 void configureDAC();
 void finalProject();
 
+
 ADC_HandleTypeDef ADCHandle;
 DAC_HandleTypeDef DACHandle;
 TIM_HandleTypeDef tim7;
@@ -31,9 +32,10 @@ int main(void)
 	configureADC();
 	configureDAC();
 	HAL_ADC_Start(&ADCHandle);
-	printf("\r\n============ Starting LAB 04 ===============\r\n");
+	printf("\r\n============ Starting Final Project ===============\r\n");
+
 //	triangleWave(1000, 0);
-	squareWave(2000,2000);
+//	squareWave(2000,2000);
 //	generateSine(1000,0);
 //	finalProject();
 //	task1();
@@ -42,24 +44,24 @@ int main(void)
 //	task4();
 //	task3();
 //	task4();
-	float adc_buffer[3] = {0.0};
-	float previous = 0.0;
-	float new_value = 0.0;
-	while(1){
-		for(int i = 0; i < 3; i++){
-			//adc read
-			HAL_ADC_Start(&ADCHandle);
-			HAL_ADC_PollForConversion(&ADCHandle,100);
-			adc_buffer[i] = HAL_ADC_GetValue(&ADCHandle);
-		}
+
 //		HAL_Delay(1000);
 //		new_value = (float) task4(&adc_buffer, previous);
 //		new_value = (float) task4_part2(&adc_buffer, previous);
 
 //		printf("\t\t\t\tprevious: %f, %lu\r\n", new_value, (uint32_t) new_value);
-		HAL_DAC_Start(&DACHandle,DAC1_CHANNEL_1);
-		HAL_DAC_SetValue(&DACHandle,DAC1_CHANNEL_1,DAC_ALIGN_12B_R,(uint32_t) new_value);
-		previous = new_value;
+
+	printf("Select a Wave to generate:\r\n1: Square Wave\r\n2: Sine Wave\r\n3: Triangle Wave\r\n4: Sawtooth Wave\r\n");
+	uint8_t choice;
+	scanf("%u", &choice);
+	if(choice == 1){
+		squareWave(2000,2000);
+	}else if(choice == 2){
+		generateSine(1000,0);
+	}else if(choice == 3){
+		triangleWave(1000,0);
+	}else if(choice == 4){
+		generateSawtooth(15,1,1500);
 	}
 
 
@@ -184,7 +186,7 @@ void timeTest(){
 
 }
 
-void task2(uint32_t f, uint32_t a, uint32_t o){
+void generateSawtooth(uint32_t f, uint32_t a, uint32_t o){
 	uint32_t output = 0;
 	uint32_t freq = 100000/15 * f;
 	uint32_t wave = 0;
